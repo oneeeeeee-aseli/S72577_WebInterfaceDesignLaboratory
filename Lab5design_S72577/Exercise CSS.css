@@ -1,0 +1,99 @@
+/* Reset some default styling */ 
+body, h1, h2, p, table, th, td { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+   } 
+   /* General page layout */ 
+   body { 
+    font-family: 'Roboto', sans-serif; 
+    background-color: #f4f4f4; 
+    color: #333; 
+    line-height: 1.6; 
+    padding: 20px; 
+   } 
+   /* Header Styling */ 
+   header { 
+    text-align: center; 
+    background-color: #6a0dad; /* Purple */ 
+    color: white; 
+    padding: 20px; 
+    position: relative; 
+   } 
+   /* Add semi-transparent background to the logo */ 
+   header img { 
+    width: 150px; /* Adjust the size as necessary */ 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+    padding: 10px; 
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent 
+   white background */ 
+    border-radius: 10px; /* Optional: rounded corners */ 
+   } 
+   /* Header Title */ 
+   header h1 { 
+    font-size: 36px; 
+    margin-top: 10px; 
+   } 
+   /* Navigation Bar Styling */ 
+   nav { 
+    background-color: #333; 
+    text-align: center; 
+    margin-bottom: 20px; 
+   } 
+   nav ul { 
+    list-style-type: none; 
+    padding: 0; 
+   } 
+   nav li { 
+    display: inline; 
+   } 
+   nav a { 
+    color: white; 
+    text-decoration: none; 
+    padding: 14px 20px; 
+    display: inline-block; 
+   } 
+   nav a:hover { 
+    background-color: #575757; 
+   } 
+   /* Section and Article Styling */ 
+   section { 
+    margin-bottom: 30px; 
+   } 
+   article { 
+    background-color: white; 
+    padding: 20px; 
+    margin-bottom: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+   } 
+   article h2 { 
+    color: #6a0dad; /* Purple */ 
+   } 
+   /* Table Styling */ 
+   table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 20px; 
+   } 
+   table, th, td { 
+    border: 1px solid #ddd; 
+   } 
+   th, td { 
+    padding: 12px; 
+    text-align: left; 
+   } 
+   th { 
+    background-color: #6a0dad; /* Purple */ 
+    color: white; 
+   } 
+   /* Footer Styling */ 
+   footer { 
+    text-align: center; 
+    background-color: #333; 
+    color: white; 
+    padding: 10px; 
+    margin-top: 20px; 
+   }
