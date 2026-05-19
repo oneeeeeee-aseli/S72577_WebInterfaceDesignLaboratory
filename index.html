@@ -1,39 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>S72577 - Laboratory Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    />
+
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
             padding: 2rem 0;
         }
-        
-        .container {
+
+        .container-custom {
             max-width: 1200px;
-            margin: 0 auto;
+            margin: auto;
             padding: 0 20px;
         }
-        
+
         .header {
             text-align: center;
             margin-bottom: 3rem;
-            background: rgba(255,255,255,0.95);
+            background: rgba(255, 255, 255, 0.95);
             padding: 2.5rem;
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
-        
+
         .header h1 {
             font-size: 2.5rem;
             font-weight: bold;
@@ -43,27 +48,27 @@
             background-clip: text;
             margin-bottom: 0.5rem;
         }
-        
+
         .header p {
             color: #666;
             font-size: 1.1rem;
         }
-        
+
         .student-id {
             display: inline-block;
             background: #667eea;
             color: white;
-            padding: 0.3rem 1rem;
+            padding: 0.4rem 1rem;
             border-radius: 20px;
             font-size: 0.9rem;
-            margin-top: 0.5rem;
+            margin-top: 0.8rem;
         }
-        
+
         .badge-container {
             margin-top: 1rem;
         }
-        
-        .badge {
+
+        .skill-badge {
             display: inline-block;
             padding: 0.5rem 1rem;
             margin: 0.25rem;
@@ -72,7 +77,7 @@
             color: white;
             font-size: 0.85rem;
         }
-        
+
         .stats-container {
             display: flex;
             justify-content: center;
@@ -80,46 +85,47 @@
             margin-top: 1.5rem;
             flex-wrap: wrap;
         }
-        
+
         .stat-box {
             background: #f8f9fa;
             padding: 0.8rem 1.5rem;
             border-radius: 10px;
             text-align: center;
+            min-width: 120px;
         }
-        
+
         .stat-number {
             font-size: 1.5rem;
             font-weight: bold;
             color: #667eea;
         }
-        
+
         .stat-label {
             font-size: 0.8rem;
             color: #666;
         }
-        
+
         .labs-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 1.5rem;
             margin-bottom: 3rem;
         }
-        
+
         .lab-card {
             background: white;
             border-radius: 15px;
             padding: 2rem;
             text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
-        
+
         .lab-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transform: translateY(-6px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
         }
-        
+
         .lab-number {
             font-size: 4rem;
             font-weight: bold;
@@ -129,145 +135,188 @@
             background-clip: text;
             margin-bottom: 0.5rem;
         }
-        
+
         .lab-label {
-            color: #999;
+            color: #888;
             font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 2px;
             margin-bottom: 1rem;
         }
-        
+
         .btn-view {
             display: inline-block;
-            padding: 0.6rem 1.5rem;
+            padding: 0.7rem 1.6rem;
             background: linear-gradient(135deg, #667eea, #764ba2);
             color: white;
             text-decoration: none;
-            border-radius: 25px;
-            transition: opacity 0.3s ease;
+            border-radius: 30px;
+            transition: 0.3s ease;
             font-size: 0.9rem;
-            margin-top: 1rem;
-            border: none;
-            cursor: pointer;
+            font-weight: 500;
         }
-        
+
         .btn-view:hover {
             opacity: 0.9;
             color: white;
         }
-        
+
         footer {
             text-align: center;
             padding: 2rem;
-            background: rgba(0,0,0,0.8);
+            background: rgba(0, 0, 0, 0.8);
             border-radius: 15px;
             color: white;
         }
-        
+
         @media (max-width: 768px) {
             .header h1 {
-                font-size: 1.8rem;
+                font-size: 2rem;
             }
-            
-            .labs-grid {
-                grid-template-columns: 1fr;
-            }
-            
+
             .lab-number {
                 font-size: 3rem;
+            }
+
+            .labs-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
+
 <body>
-    <div class="container">
+
+    <div class="container-custom">
+
+        <!-- HEADER -->
         <div class="header">
             <h1>📚 S72577 Laboratory Portfolio</h1>
+
             <p>Web Interface Design - Complete Lab Work</p>
-            <div class="student-id">Student ID: S72577</div>
-            <div class="badge-container">
-                <span class="badge">HTML5</span>
-                <span class="badge">CSS3</span>
-                <span class="badge">JavaScript</span>
-                <span class="badge">Bootstrap 5</span>
+
+            <div class="student-id">
+                Student ID: S72577
             </div>
+
+            <div class="badge-container">
+                <span class="skill-badge">HTML5</span>
+                <span class="skill-badge">CSS3</span>
+                <span class="skill-badge">JavaScript</span>
+                <span class="skill-badge">Bootstrap 5</span>
+            </div>
+
             <div class="stats-container">
                 <div class="stat-box">
                     <div class="stat-number">8</div>
                     <div class="stat-label">Total Labs</div>
                 </div>
+
                 <div class="stat-box">
                     <div class="stat-number">100%</div>
                     <div class="stat-label">Completed</div>
                 </div>
             </div>
         </div>
-        
+
+        <!-- LAB CARDS -->
         <div class="labs-grid">
-            <!-- Lab 1 -->
+
+            <!-- LAB 1 -->
             <div class="lab-card">
                 <div class="lab-number">01</div>
                 <div class="lab-label">Laboratory</div>
-                <a href="Lab1design_S72577/" class="btn-view">View Lab 01 →</a>
+
+                <!-- CHANGE filename if needed -->
+                <a href="./Lab1design_S72577/lab1.html" class="btn-view">
+                    View Lab 01 →
+                </a>
             </div>
-            
-            <!-- Lab 2 -->
+
+            <!-- LAB 2 -->
             <div class="lab-card">
                 <div class="lab-number">02</div>
                 <div class="lab-label">Laboratory</div>
-                <a href="Lab2design_S72577/" class="btn-view">View Lab 02 →</a>
+
+                <a href="./Lab2design_S72577/lab2.html" class="btn-view">
+                    View Lab 02 →
+                </a>
             </div>
-            
-            <!-- Lab 3 -->
+
+            <!-- LAB 3 -->
             <div class="lab-card">
                 <div class="lab-number">03</div>
                 <div class="lab-label">Laboratory</div>
-                <a href="Lab3design_S72577/" class="btn-view">View Lab 03 →</a>
+
+                <a href="./Lab3design_S72577/lab3.html" class="btn-view">
+                    View Lab 03 →
+                </a>
             </div>
-            
-            <!-- Lab 4 -->
+
+            <!-- LAB 4 -->
             <div class="lab-card">
                 <div class="lab-number">04</div>
                 <div class="lab-label">Laboratory</div>
-                <a href="Lab4design_S72577/" class="btn-view">View Lab 04 →</a>
+
+                <a href="./Lab4design_S72577/lab4.html" class="btn-view">
+                    View Lab 04 →
+                </a>
             </div>
-            
-            <!-- Lab 5 -->
+
+            <!-- LAB 5 -->
             <div class="lab-card">
                 <div class="lab-number">05</div>
                 <div class="lab-label">Laboratory</div>
-                <a href="Lab5design_S72577/" class="btn-view">View Lab 05 →</a>
+
+                <a href="./Lab5design_S72577/lab5.html" class="btn-view">
+                    View Lab 05 →
+                </a>
             </div>
-            
-            <!-- Lab 6 -->
+
+            <!-- LAB 6 -->
             <div class="lab-card">
                 <div class="lab-number">06</div>
                 <div class="lab-label">Laboratory</div>
-                <a href="Lab6design_S72577/" class="btn-view">View Lab 06 →</a>
+
+                <a href="./Lab6design_S72577/lab6.html" class="btn-view">
+                    View Lab 06 →
+                </a>
             </div>
-            
-            <!-- Lab 7 -->
+
+            <!-- LAB 7 -->
             <div class="lab-card">
                 <div class="lab-number">07</div>
                 <div class="lab-label">Laboratory</div>
-                <a href="Lab7design_S72577/" class="btn-view">View Lab 07 →</a>
+
+                <a href="./Lab7design_S72577/lab7.html" class="btn-view">
+                    View Lab 07 →
+                </a>
             </div>
-            
-            <!-- Lab 8 -->
+
+            <!-- LAB 8 -->
             <div class="lab-card">
                 <div class="lab-number">08</div>
                 <div class="lab-label">Laboratory</div>
-                <a href="https://github.com/oneeeeeee-aseli/S72577_WebInterfaceDesignLaboratory/tree/main/Lab8design_S72577" class="btn-view">View Lab 08 →</a>
+
+                <a href="./Lab8design_S72577/lab8.html" class="btn-view">
+                    View Lab 08 →
+                </a>
             </div>
+
         </div>
-        
+
+        <!-- FOOTER -->
         <footer>
-            <p><strong>S72577</strong> - Web Interface Design Laboratory</p>
-            <p style="font-size: 0.8rem; margin-top: 0.5rem;">
+            <p>
+                <strong>S72577</strong> - Web Interface Design Laboratory
+            </p>
+
+            <p style="font-size: 0.85rem; margin-top: 0.5rem;">
                 All 8 laboratories completed
             </p>
         </footer>
+
     </div>
+
 </body>
 </html>
