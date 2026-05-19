@@ -1,0 +1,153 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #6dd5ed, #2193b0);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: #e225a3;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+header p {
+    font-size: 1rem;
+    margin: 5px 0 0;
+}
+
+main {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer {
+    background: #e225a3;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+/* Quiz Section Styles */
+#quiz-section {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#timer {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #e74c3c;
+}
+
+#question {
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.options button {
+    padding: 15px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.options button:hover {
+    background: #2980b9;
+    transform: scale(1.05);
+}
+
+.options button:active {
+    background: #1a5276;
+    box-shadow: none;
+}
+
+/* Feedback Section Styles */
+#feedback-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#feedback {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #27ae60;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Button Styles */
+.button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: #8e44ad;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+    background: #732d91;
+    transform: scale(1.05);
+}
+
+.button:active {
+    background: #4e185e;
+    box-shadow: none;
+}
