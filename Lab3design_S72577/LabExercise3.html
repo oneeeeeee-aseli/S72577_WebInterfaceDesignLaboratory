@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Web Contact Form with Inline Calculator</title>
+</head>
+<body>
+  
+  <!-- Header with Image -->
+  <div>
+    <h1>Contact Us <span>Service Calculator Wan Aimi Orizainal</span></h1>
+   <!-- Added Image in Header Section -->
+   <img src="calc.jpeg" alt="Customer Service" width="300" height="200">
+</div>
+        
+  <!-- Content -->
+  <div>
+    <!-- Contact Form -->
+    <form action="">
+      
+      <br><br>
+      
+      <!-- Email -->
+      Email: <input type="email" name="userEmail" placeholder="Enter your email" required>
+      <br><br>
+      
+      <!-- Date -->
+      Preferred Contact Date: <input type="date" name="contactDate">
+      <br><br>
+     
+      <!-- Satisfaction Level Slider -->
+      Satisfaction Level: <input type="range" name="satisfaction" min="0" max="10" step="1">
+      <br><br>
+     <!-- Submit Button -->
+     <br>
+     <input type="submit" value="Submit">
+   </form>
+ </div>
+      <!-- Calculator -->
+      <div>
+        <h2>Inline Calculator</h2>
+        <form oninput="result.value=parseInt(num1.value) + parseInt(num2.value)">
+          <!-- Input fields for numbers -->
+          <input id="num1" type="number" value="0">
+          +
+          <input id="num2" type="number" value="0">
+          <br>
+          <!-- Output for the result -->
+          Result: <output name="result" for="num1 num2"></output>
+        </form>
+      </div>
+      
+      
+  
+  <!-- Footer Section -->
+  <div>
+    <footer>
+      <p>Contact us at: www.calcorizainalmazlan.com</p>
+      <p>&copy; Karya Murni Wan Aimi Orizainal &#169; &reg;</p>
+    </footer>
+  </div>
+
+</body>
+</html>
